@@ -123,3 +123,9 @@ footer ul{display:inline-block; text-align:left; padding-left:20px;}
   font-size:.85rem; margin:10px 0;
 }
 code{background:#f1f5f9; padding:1px 5px; border-radius:4px; font-size:.85em;}
+.hap-item{
+  background:#f8fafc; border-left:3px solid var(--accent); border-radius:6px;
+  padding:8px 12px; margin:8px 0; font-size:.92rem;
+}
+.hap-item b{color:#0f172a;}
+.badge.zero{background:#f1f5f9; color:var(--muted); border:1px solid #cbd5e1;}
