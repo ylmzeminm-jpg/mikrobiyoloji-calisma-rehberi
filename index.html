@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tıbbi Mikrobiyoloji ve Parazitoloji – D3 Final Çalışma Rehberi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>🦠 Tıbbi Mikrobiyoloji ve Parazitoloji</h1>
+  <p>Dönem 3 – Final Çıkmış Soru Analizine Dayalı Çalışma Rehberi</p>
+  <p style="font-size:.8rem; opacity:.75;">Tüm modül (M1-M5) çıkmışları + Final derlemesi (×2 ağırlık) + TUSDATA "Mikrobiyoloji 1" kitabından destek bilgiler</p>
+</header>
+
+<nav class="toc">
+  <a href="index.html" class="active">🏠 Ana Sayfa</a>
+  <a href="mikobakteriler.html">🔬 Mikobakteriler</a>
+  <a href="parazitler.html">🪱 Parazitler</a>
+  <a href="virusler.html">🦠 Virüsler</a>
+  <a href="mantarlar.html">🍄 Mantarlar</a>
+  <a href="bakteriler.html">🧫 Bakteriler</a>
+  <a href="genel.html">📋 Genel Mikrobiyoloji</a>
+</nav>
+
+<main>
+
+<!-- ================= ÖZET ================= -->
+<section id="ozet">
+  <h2 class="section-title">📊 Analiz Özeti</h2>
+  <p class="section-desc">8 dosyadaki tüm çıkmış sorular tek tek tarandı, mikrobiyoloji/parazitoloji soruları ayrıştırıldı ve konu başlıklarına göre sınıflandırıldı. <b>"dönem3 tüm final çıkmışları"</b> dosyasındaki sorular, isteğin üzerine <b>2 katı ağırlıkla</b> sayıma katıldı. Ayrıca TUSDATA <b>"Mikrobiyoloji 1"</b> kitabındaki (Genel Mikrobiyoloji + Bakteriyoloji + Parazitoloji, 209 sayfa) önemli/vurgulu bilgiler her konu sayfasına <span class="tus-tag" style="vertical-align:middle;">TUS KİTABI</span> etiketiyle eklendi.</p>
+  <div class="stat-grid">
+    <div class="stat-box"><div class="num">8</div><div class="label">Soru dosyası tarandı</div></div>
+    <div class="stat-box"><div class="num">~36.000</div><div class="label">Satır metin</div></div>
+    <div class="stat-box"><div class="num">~1850</div><div class="label">Toplam soru</div></div>
+    <div class="stat-box"><div class="num">~450</div><div class="label">Mikro/Parazitoloji sorusu</div></div>
+    <div class="stat-box"><div class="num">209</div><div class="label">TUS kitabı sayfası tarandı</div></div>
+  </div>
+  <table class="rank">
+    <tr><th>Dosya</th><th>Toplam Soru</th><th>Mikro/Parazit Sorusu</th><th>Ağırlık</th></tr>
+    <tr><td>dönem3 tüm final çıkmışları27.txt</td><td>~550-600</td><td>~75-85</td><td><b>×2 (FİNAL)</b></td></tr>
+    <tr><td>d3m3.txt</td><td>~462</td><td>~245-250</td><td>×1</td></tr>
+    <tr><td>d3m2.28e kadar.txt</td><td>~410-430</td><td>~55-60</td><td>×1</td></tr>
+    <tr><td>29 d3m2.txt</td><td>102</td><td>34</td><td>×1</td></tr>
+    <tr><td>29 d3m3.txt</td><td>~50</td><td>~25-26</td><td>×1</td></tr>
+    <tr><td>29d3m5.txt</td><td>~?</td><td>3</td><td>×1</td></tr>
+    <tr><td>29 d3m1.txt</td><td>95</td><td>0</td><td>×1</td></tr>
+    <tr><td>29d3m4.txt</td><td>~?</td><td>0</td><td>×1</td></tr>
+  </table>
+  <div class="note">💡 <b>29 d3m1.txt</b> ve <b>29d3m4.txt</b> tamamen Biyofizik/Farmakoloji/Patoloji/Endokrin/KadınDoğum/Genetik içeriyor – mikro sorusu yok, rehbere dahil edilmedi.</div>
+</section>
+
+<!-- ================= KONU SAYFALARI ================= -->
+<section id="konular">
+  <h2 class="section-title">📚 Konu Sayfaları</h2>
+  <p class="section-desc">Her konu kendi sayfasında — çıkmış soru analizi ve TUS kitabından alınan destek bilgiler birlikte. ⭐ ile işaretli sayfalar (Mikobakteriler ve Parazitler) en yüksek öncelikli konulardır.</p>
+  <div class="cards-grid">
+    <a class="nav-card" href="mikobakteriler.html" style="border-left-color:var(--cok-sik);">
+      <div class="emoji">🔬</div>
+      <h3>⭐ Mikobakteriler</h3>
+      <p>M. tuberculosis (virülans, patogenez, RIPE, tanı), M. leprae/Lepra, atipik mikobakteriler (Runyon sınıflaması), Nocardia.</p>
+    </a>
+    <a class="nav-card" href="parazitler.html" style="border-left-color:var(--cok-sik);">
+      <div class="emoji">🪱</div>
+      <h3>⭐ Parazitler</h3>
+      <p>İntestinal/doku protozoonları, sıtma, Leishmania, sestodlar (Taenia/Echinococcus), nematodlar, trematodlar, artropodlar, antiparaziter ilaçlar.</p>
+    </a>
+    <a class="nav-card" href="bakteriler.html">
+      <div class="emoji">🧫</div>
+      <h3>Bakteriler</h3>
+      <p>Stafilokok/Streptokoklar, Enterobacteriaceae, Gram (+) çomaklar, solunum/hayvansal kaynaklı GNB'ler, spiroketler, Mycoplasma, Chlamydia/Rickettsia.</p>
+    </a>
+    <a class="nav-card" href="virusler.html">
+      <div class="emoji">🦠</div>
+      <h3>Virüsler</h3>
+      <p>KKKA, Herpesviridae, Hepatit virüsleri, HPV, onkojenik virüsler, HIV/AIDS, İnfluenza, Kızamık/Kabakulak/Rubella.</p>
+    </a>
+    <a class="nav-card" href="mantarlar.html">
+      <div class="emoji">🍄</div>
+      <h3>Mantarlar</h3>
+      <p>Candida, Aspergillus, Mucor/Rhizopus, Histoplasma/Coccidioides ve granülomatöz akciğer hastalıkları ayırıcı tanısı.</p>
+    </a>
+    <a class="nav-card" href="genel.html">
+      <div class="emoji">📋</div>
+      <h3>Genel Mikrobiyoloji</h3>
+      <p>Bakteri yapısı, boyama yöntemleri, üreme/metabolizma, genetik, virülans/toksinler, antibiyotik mekanizmaları &amp; direnç, aşılar, sterilizasyon-dezenfeksiyon.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ================= SIRALAMA ================= -->
+<section id="siralama">
+  <h2 class="section-title">🏆 Konulara Göre Sıklık Sıralaması (Final-Ağırlıklı)</h2>
+  <p class="section-desc">En sık çıkan konudan en az sık çıkana doğru sıralandı. <span class="badge cok-sik">ÇOK SIK</span> = mutlaka çalış, <span class="badge sik">SIK</span> = yüksek olasılıkla çıkar, <span class="badge orta">ORTA</span> = zaman kalırsa çalış.</p>
+  <table class="rank">
+    <tr><th>#</th><th>Konu</th><th>Ağırlıklı Skor</th><th>Öncelik</th><th>Sayfa</th></tr>
+    <tr><td>1</td><td><b>Parazitoloji (genel toplam)</b></td><td>~82</td><td><span class="badge cok-sik">ÇOK SIK</span></td><td><a href="parazitler.html">Parazitler</a></td></tr>
+    <tr><td>2</td><td><b>Genel Bakteriyoloji / Antibiyotik / Aşı / Tanı Yöntemleri</b></td><td>~71</td><td><span class="badge cok-sik">ÇOK SIK</span></td><td><a href="genel.html">Genel</a></td></tr>
+    <tr><td>3</td><td>Mantarlar (Candida, Aspergillus, Mucor, Nocardia...)</td><td>~39</td><td><span class="badge sik">SIK</span></td><td><a href="mantarlar.html">Mantarlar</a></td></tr>
+    <tr><td>4</td><td>Herpesviridae (HSV, VZV, EBV, CMV, HHV6-8)</td><td>27</td><td><span class="badge sik">SIK</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>5</td><td>Hepatit Virüsleri (A-E)</td><td>25</td><td><span class="badge sik">SIK</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>6</td><td><b>Mikobakteriler (M.tuberculosis + M.leprae + atipikler)</b></td><td>24</td><td><span class="badge sik">SIK</span></td><td><a href="mikobakteriler.html">Mikobakteriler</a></td></tr>
+    <tr><td>7</td><td>Salmonella / Shigella / E.coli</td><td>~22</td><td><span class="badge sik">SIK</span></td><td><a href="bakteriler.html">Bakteriler</a></td></tr>
+    <tr><td>8</td><td>↳ Entamoeba / Giardia (parazit alt grubu)</td><td>17</td><td><span class="badge orta">ORTA</span></td><td><a href="parazitler.html">Parazitler</a></td></tr>
+    <tr><td>9</td><td>Diğer / Genel Viroloji konuları</td><td>17</td><td><span class="badge orta">ORTA</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>10</td><td>↳ Nematodlar (parazit alt grubu)</td><td>14</td><td><span class="badge orta">ORTA</span></td><td><a href="parazitler.html">Parazitler</a></td></tr>
+    <tr><td>11</td><td>İnfluenza</td><td>13</td><td><span class="badge orta">ORTA</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>12</td><td>Staphylococcus aureus</td><td>12</td><td><span class="badge orta">ORTA</span></td><td><a href="bakteriler.html">Bakteriler</a></td></tr>
+    <tr><td>13</td><td>HIV / AIDS</td><td>12</td><td><span class="badge orta">ORTA</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>14</td><td>Clostridium türleri</td><td>11</td><td><span class="badge orta">ORTA</span></td><td><a href="bakteriler.html">Bakteriler</a></td></tr>
+    <tr><td>15</td><td>Kızamık / Kabakulak / Rubella</td><td>11</td><td><span class="badge orta">ORTA</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+    <tr><td>16</td><td>↳ Plasmodium / Sıtma (parazit alt grubu)</td><td>10</td><td><span class="badge orta">ORTA</span></td><td><a href="parazitler.html">Parazitler</a></td></tr>
+    <tr><td>17</td><td>↳ Sestodlar / Echinococcus (parazit alt grubu)</td><td>10</td><td><span class="badge orta">ORTA</span></td><td><a href="parazitler.html">Parazitler</a></td></tr>
+    <tr><td>18</td><td>HPV</td><td>10</td><td><span class="badge orta">ORTA</span></td><td><a href="virusler.html">Virüsler</a></td></tr>
+  </table>
+</section>
+
+<!-- ================= TUS KİTABI HAKKINDA ================= -->
+<section id="tus-kitabi">
+  <h2 class="section-title">🟢 TUS Kitabı İçeriği Hakkında</h2>
+  <div class="tus-box" style="font-size:.95rem;">
+    <span class="tus-tag">TUSDATA · MİKROBİYOLOJİ 1</span>
+    <p style="margin:6px 0 0;">Bu yeşil kutular, TUSDATA'nın <b>"Mikrobiyoloji 1"</b> hazırlık kitabından (Genel Mikrobiyoloji + Bakteriyoloji + Parazitoloji, ~209 sayfa) tarafımca taranan, kitapta <b>renkli kutu/kalın yazıyla vurgulanmış</b> veya tablo halinde verilmiş kritik bilgileri özetler. Amaç, çıkmış sorulardaki konuları TUS-tarzı ek detaylarla (mekanizma, karşılaştırma tablosu, "spot bilgi") desteklemektir.</p>
+  </div>
+  <div class="note">📌 Not: Bu kitap <b>Viroloji, Mikoloji ve İmmünoloji</b> bölümlerini içermiyor (sadece Genel Mikrobiyoloji + Bakteriyoloji + Parazitoloji) — bu yüzden <a href="virusler.html">Virüsler</a> ve <a href="mantarlar.html">Mantarlar</a> sayfalarında TUS kitabı kutuları yok, sadece çıkmış soru analizleri var.</div>
+</section>
+
+</main>
+
+<footer>
+  <h3>💡 Çalışma İpuçları</h3>
+  <ul>
+    <li><b>Önce ÇOK SIK ve SIK</b> etiketli konuları bitir – bunlar final-ağırlıklı sıralamada en üstte. Sırasıyla: <a href="parazitler.html" style="color:#5eead4;">Parazitler</a> → <a href="genel.html" style="color:#5eead4;">Genel Mikrobiyoloji</a> → <a href="mantarlar.html" style="color:#5eead4;">Mantarlar</a> → <a href="virusler.html" style="color:#5eead4;">Virüsler</a> → <a href="mikobakteriler.html" style="color:#5eead4;">Mikobakteriler</a> → <a href="bakteriler.html" style="color:#5eead4;">Bakteriler</a>.</li>
+    <li><b>Mycobacterium tuberculosis</b> RIPE mekanizmalarını, yan etki tablosunu ve asit-fast boyama mantığını ezberle – Nocardia ile karıştırma sorularına dikkat et.</li>
+    <li><b>Parazitoloji</b> konusunda "hangisi yanlıştır" tipi sorular çok sık – karşılaştırmalı tablolardaki AYIRICI özelliklere (silahlı/silahsız, indirekt/direkt döngü, enfektif larva tipi, bulaş yolu) odaklan.</li>
+    <li>Belirsiz/işaretlenmiş ("⚠️") sorularda kendi ders notlarınla veya öğretim üyenle teyit et – bu sorularda OCR kaynaklı eksik metin veya yorum farkı olabilir.</li>
+    <li>Yeşil <span class="tus-tag" style="vertical-align:middle;">TUS KİTABI</span> kutularındaki karşılaştırma tabloları (Plasmodium türleri, Taenia türleri, Runyon sınıflaması, eksotoksin/endotoksin, antibiyotik direnç mekanizmaları) sınavda genelde "eşleştirme" veya "ayırıcı tanı" formatında çıkıyor – tekrar tekrar gözden geçir.</li>
+  </ul>
+  <p style="margin-top:18px; opacity:.6;">Bu rehber, paylaşılan çıkmış soru dosyalarının ve TUS kitabının analizine dayanarak otomatik olarak oluşturulmuştur. Başarılar! 🍀</p>
+</footer>
+
+</body>
+</html>

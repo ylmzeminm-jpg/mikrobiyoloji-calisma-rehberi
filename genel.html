@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genel Mikrobiyoloji – Mikrobiyoloji Çalışma Rehberi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>📋 Genel Mikrobiyoloji</h1>
+  <p>Bakteri Yapısı · Boyama · Üreme/Metabolizma · Genetik · Toksinler · Antibiyotikler/Direnç · Aşılar · Sterilizasyon</p>
+</header>
+
+<nav class="toc">
+  <a href="index.html">🏠 Ana Sayfa</a>
+  <a href="mikobakteriler.html">🔬 Mikobakteriler</a>
+  <a href="parazitler.html">🪱 Parazitler</a>
+  <a href="virusler.html">🦠 Virüsler</a>
+  <a href="mantarlar.html">🍄 Mantarlar</a>
+  <a href="bakteriler.html">🧫 Bakteriler</a>
+  <a href="genel.html" class="active">📋 Genel Mikrobiyoloji</a>
+</nav>
+
+<main>
+
+<section id="genel">
+  <p class="section-desc">Bu kategori final-ağırlıklı sıralamada <b>~71 puanla 2. sırada</b> – özellikle antibiyotik mekanizmaları/direnç, toksinler ve aşı türleri her sınavda mutlaka çıkıyor. TUSDATA "Mikrobiyoloji 1" kitabının <b>Genel Mikrobiyoloji</b> bölümünden gelen <span class="tus-tag" style="vertical-align:middle;">TUS KİTABI</span> kutuları bu sayfada yoğun olarak yer alıyor.</p>
+
+  <!-- ======================= PROKARYOT/ÖKARYOT, PRİON, VİROİD ======================= -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <h3>🧫 Prokaryot vs Ökaryot · Prion · Viroid</h3>
+      <span class="badge orta">ORTA</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <table class="compare">
+        <tr><th></th><th>Prokaryot (Bakteri)</th><th>Ökaryot (Mantar/İnsan hücresi)</th></tr>
+        <tr><td>Hücre duvarı</td><td><b>Peptidoglikan</b> (Archaea hariç)</td><td>Yok (insan), kitin/glukan (mantar)</td></tr>
+        <tr><td>Çekirdek</td><td>Zarsız (nükleoid)</td><td>Zarlı çekirdek</td></tr>
+        <tr><td>Ribozom</td><td><b>70S</b> (30S+50S)</td><td><b>80S</b> (40S+60S)</td></tr>
+        <tr><td>Organel</td><td>Yok</td><td>Mitokondri, ER, Golgi vb.</td></tr>
+      </table>
+      <p style="margin:8px 0 0;">📌 Birçok antibiyotik (aminoglikozid, makrolid, tetrasiklin, kloramfenikol) <b>70S ribozomu</b> hedef alarak insan 80S ribozomuna zarar vermeden bakteriyi öldürür.</p>
+      <h4>Prion</h4>
+      <p style="margin:4px 0;">Sadece <b>protein</b> içerir, <b>nükleik asit YOKTUR</b>; normal hücresel prion proteininin (PrP^C) yanlış katlanmış (PrP^Sc) formuna dönüşmesiyle bulaşır. Spongiform ensefalopatilere yol açar (Creutzfeldt-Jakob, Kuru). <b>Standart sterilizasyon yöntemlerine (otoklav dahil) son derece dirençlidir.</b></p>
+      <h4>Viroid</h4>
+      <p style="margin:4px 0;">Küçük, dairesel, <b>protein kılıfı olmayan RNA</b> – başlıca bitki patojenleridir.</p>
+    </div>
+  </div>
+
+  <!-- ======================= BAKTERİ YAPISI VE BOYAMA ======================= -->
+  <div class="topic-card cok-sik-card">
+    <div class="topic-header">
+      <h3>🔬 Bakteri Hücre Yapısı ve Boyama Yöntemleri</h3>
+      <span class="badge cok-sik">ÇOK SIK</span>
+    </div>
+    <ul>
+      <li><b>Gram boyama:</b> Gram-pozitif (mor) vs Gram-negatif (pembe) – hücre duvarı yapısına bağlı</li>
+      <li><b>Ziehl-Neelsen / Kinyoun (asit-fast):</b> Mycobacterium türleri için</li>
+      <li><b>Modifiye asit-fast:</b> Cryptosporidium, Isospora, Cyclospora (parazitik ookistler) için</li>
+      <li><b>Giemsa:</b> Plasmodium, Leishmania, Trypanosoma</li>
+      <li><b>Seroloji (ELISA, Western blot):</b> HIV, Echinococcus, Toxoplasma vb.</li>
+      <li><b>PCR / moleküler testler:</b> Hızlı ve duyarlı, MTB/RIF direnci dahil</li>
+    </ul>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Hücre Duvarı – Gram (+) vs Gram (-)</h4>
+      <table class="compare">
+        <tr><th></th><th>Gram (+)</th><th>Gram (-)</th></tr>
+        <tr><td>Peptidoglikan</td><td>Kalın (çok katlı)</td><td>İnce (tek katlı)</td></tr>
+        <tr><td>Teikoik asit</td><td>Var</td><td>Yok</td></tr>
+        <tr><td>Dış membran</td><td>Yok</td><td><b>Var</b> – LPS (endotoksin/Lipid A) içerir</td></tr>
+        <tr><td>Periplazmik aralık</td><td>Yok/az</td><td>Var (beta-laktamazlar burada birikir)</td></tr>
+      </table>
+
+      <h4>Asit-Fast (Aside Dirençli) Boyanan Organizmalar – Tam Liste</h4>
+      <ul>
+        <li><b>Tam asit-fast (Ziehl-Neelsen/Kinyoun):</b> M. tuberculosis, Legionella micdadei, Rhodococcus equi, Nocardia asteroides (Nocardia <i>kısmen</i> asit-fast'tır)</li>
+        <li><b>Modifiye asit-fast ile boyanan ookistler:</b> <b>Cryptosporidium parvum, Cyclospora cayetanensis, Isospora belli</b></li>
+      </ul>
+
+      <h4>Flagella Sınıflandırması</h4>
+      <p style="margin:4px 0;">Konumlarına göre: <b>monotrik</b> (tek, bir kutupta), <b>lofotrik</b> (bir kutupta demet), <b>amfitrik</b> (her iki kutupta), <b>peritrik</b> (tüm yüzeyde – örn. E. coli, Salmonella).</p>
+
+      <h4>Kapsül</h4>
+      <p style="margin:4px 0;">Çoğu bakteride <b>polisakkarit</b> yapıdadır ve antifagositiktir (S. pneumoniae, N. meningitidis, H. influenzae, Klebsiella). <b>İstisna: B. anthracis</b> kapsülü <b>poli-D-glutamik asit</b> (protein/polipeptid) yapısındadır.</p>
+
+      <h4>Spor (Endospor)</h4>
+      <p style="margin:4px 0;">Sadece <b>Bacillus</b> ve <b>Clostridium</b> cinslerinde görülür; dehidrate, metabolik olarak inaktif, ısı/kimyasallara son derece dirençli yapılardır. Sterilizasyonun yeterliliği genellikle <b>spor öldürme</b> kapasitesine göre değerlendirilir.</p>
+    </div>
+  </div>
+
+  <!-- ======================= ÜREME VE METABOLİZMA ======================= -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <h3>📈 Bakteri Üremesi ve Metabolizması</h3>
+      <span class="badge orta">ORTA</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Üreme Eğrisi (4 Faz)</h4>
+      <p style="margin:4px 0;"><b>Lag faz</b> (adaptasyon, çoğalma yok) → <b>Log/eksponensiyel faz</b> (hızlı bölünme) → <b>Durağan (stationary) faz</b> (üreme=ölüm, besin tükenir) → <b>Ölüm fazı</b>.</p>
+      <p style="margin:4px 0;">📌 <b>M. tuberculosis</b> generasyon süresi <b>~18-24 saat</b> – hızlı üreyen bakterilerin (örn. E. coli ~20 dakika) çok altındadır; bu yüzden kültür sonuçları haftalar sürer (bkz. <a href="mikobakteriler.html">Mikobakteriler</a>).</p>
+      <h4>Oksijen Gereksinimine Göre Sınıflandırma</h4>
+      <ul style="margin:0;">
+        <li><b>Obligat aerob</b> – sadece O₂ varlığında ürer</li>
+        <li><b>Obligat anaerob</b> – O₂ toksiktir (Clostridium, Bacteroides)</li>
+        <li><b>Fakültatif anaerob</b> – her iki ortamda da ürer (çoğu Enterobacteriaceae)</li>
+        <li><b>Mikroaerofilik</b> – düşük O₂ konsantrasyonunda ürer (<b>Campylobacter, Helicobacter pylori</b>)</li>
+        <li><b>Aerotolerant anaerob</b> – O₂'den etkilenmez ama kullanmaz</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======================= VİRÜLANS FAKTÖRLERİ VE TOKSİNLER ======================= -->
+  <div class="topic-card cok-sik-card">
+    <div class="topic-header">
+      <h3>☣️ Virülans Faktörleri ve Toksinler</h3>
+      <span class="badge cok-sik">ÇOK SIK</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Eksotoksin vs Endotoksin – Tam Karşılaştırma</h4>
+      <table class="compare">
+        <tr><th></th><th>Eksotoksin</th><th>Endotoksin (LPS / Lipid A)</th></tr>
+        <tr><td>Kaynak</td><td>Gram (+) ve bazı Gram (-) bakterilerce <b>salgılanır</b></td><td>Gram (-) bakteri <b>hücre duvarının yapısal parçası</b> (lizis ile açığa çıkar)</td></tr>
+        <tr><td>Kimyasal yapı</td><td>Protein</td><td>Lipopolisakkarit (Lipid A kısmı toksik)</td></tr>
+        <tr><td>Isıya dayanıklılık</td><td>Genelde <b>labil</b> (ısıyla inaktive olur)</td><td><b>Stabil</b> (ısıya dirençli)</td></tr>
+        <tr><td>Toksoid yapımı</td><td><b>Evet</b> (aşı için kullanılabilir – difteri/tetanoz toksoidi)</td><td>Hayır</td></tr>
+        <tr><td>Etki şekli</td><td>Spesifik reseptör/hedefe yönelik (örn. enzim inhibisyonu)</td><td>Genel – <b>TNF-α, IL-1 salınımını</b> tetikleyerek ateş, şok, DIC</td></tr>
+        <tr><td>Örnekler</td><td>Tetanospazmin, botulinum, difteri toksini, kolera toksini, Shiga toksini</td><td>E. coli, Salmonella, Neisseria, tüm Gram (-) bakterilerin LPS'i</td></tr>
+      </table>
+
+      <h4>Enterik Toksinlerin Sınıflandırılması</h4>
+      <ul>
+        <li><b>Nörotoksik:</b> Botulinum toksini, Tetanoz toksini (tetanospazmin)</li>
+        <li><b>Sitotoksik:</b> Shiga toksini (protein sentez inhibisyonu – 60S ribozomal alt birim), Difteri toksini (EF-2 ADP-ribozilasyonu)</li>
+        <li><b>Sekretuvar (enterotoksin):</b> Kolera toksini, E. coli LT/ST, S. aureus enterotoksinleri – sıvı/elektrolit sekresyonunu artırarak sulu ishal yapar</li>
+      </ul>
+    </div>
+
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Bağışıklıktan Kaçış Mekanizmaları</h4>
+      <ul>
+        <li><b>Kapsül</b> – fagositozu önler (S. pneumoniae, N. meningitidis, H. influenzae, Klebsiella)</li>
+        <li><b>IgA proteaz</b> – mukozal IgA'yı parçalar (N. gonorrhoeae, H. influenzae, S. pneumoniae)</li>
+        <li><b>Protein A</b> – IgG Fc bölgesine bağlanarak opsonizasyonu/fagositozu engeller (S. aureus)</li>
+        <li><b>Antijenik değişim (variation)</b> – Borrelia (relapsing fever), Trypanosoma, N. gonorrhoeae (pilus antijenleri)</li>
+        <li><b>Hücre içi yaşam</b> – fagolizozom füzyonunu engelleyerek/kaçarak makrofaj içinde hayatta kalma (Mycobacterium, Listeria, Salmonella, Legionella)</li>
+        <li><b>Latent enfeksiyon</b> – granülom içinde dormansi (<b>M. tuberculosis</b>)</li>
+        <li><b>Komplemana direnç</b> – sialik asit içeren kapsül (N. meningitidis grup B, E. coli K1)</li>
+        <li><b>Biyofilm oluşumu</b> – antibiyotik/immün hücre penetrasyonunu azaltır (P. aeruginosa, S. epidermidis – kateter enfeksiyonları)</li>
+        <li><b>Moleküler mimikri</b> – konak dokularına benzer antijenler (Campylobacter jejuni → Guillain-Barré)</li>
+        <li><b>Endospor oluşumu</b> – aşırı çevresel koşullara (ısı, kuruma, kimyasal) karşı uzun süreli direnç (Bacillus, Clostridium)</li>
+        <li><b>Viral sitokin/kemokin/kompleman homologları</b> – özellikle poxvirus ve herpesvirüsler, konak sitokin/kemokin/kompleman proteinleriyle yarışan veya bunları taklit eden homolog proteinler üreterek bu moleküllerin etkisinden kaçar</li>
+        <li><b>MHC class I baskılanması</b> – bazı DNA virüsleri MHC I moleküllerine bağlanır veya yapısını değiştirerek CD8+ sitotoksik T hücrelerinden kaçar</li>
+        <li><b>Antimikrobiyal peptit (AMP) direnci</b> – membran yükünü/hidrofobikliğini değiştirerek AMP'lerin yapışmasını ve por oluşturmasını engeller</li>
+        <li><b>T hücre tükenmesi (exhaustion)</b> – kronik viral enfeksiyonlarda (HIV, HBV, HCV) antijene özgü T hücre yanıtı zamanla AZALIR, ARTMAZ</li>
+      </ul>
+    </div>
+
+    <details class="q">
+      <summary>📝 Final – Soru 36 (Mikroorganizmaların immün sistemden kaçış mekanizmaları)</summary>
+      <div class="qbody">"Mikroorganizmaların immün sistemden kaçış mekanizmaları ile ilgili;
+I. Çoğu virüs sitokin, kemokin ve kompleman ile yarışan ya da bunları taklit eden homologlar üretirler. Bu sayede bunların etkilerinden kaçarlar.
+II. Çeşitli DNA virüsleri MHC class I proteinlere bağlanarak veya bunları değiştirerek CD8+ T hücrelerinden kaçarlar.
+III. Bazı mikroorganizmalar antimikrobiyal peptitlerin yapışmasını ve por oluşturmasını, membran yükü ve hidrofobikliğini değiştirerek engeller.
+IV. Kronik viral enfeksiyonların seyri sırasında antijene özgü T hücre yanıtı sürekli artar.
+ifadelerinden hangileri doğrudur?
+A) I, II, IV
+B) I, II, III, IV
+C) I, II, III
+D) II, III
+E) Sadece I"</div>
+      <div class="answer">✅ Cevap: <b>C) I, II ve III</b> – I-III doğrudur (sitokin/kemokin/kompleman homologları, MHC I'i bozarak CD8+ T hücrelerden kaçış, antimikrobiyal peptit direnci). <b>IV yanlıştır</b>: kronik viral enfeksiyonlarda (HIV, HBV, HCV) antijene özgü T hücre yanıtı zamanla <b>azalır</b> ve fonksiyon kaybı gelişir – bu duruma <b>"T hücre tükenmesi" (T cell exhaustion)</b> denir.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 6110-6130, çözüm satır 7197-7200</div>
+    </details>
+
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Fagositer Öldürme ve ADCC</h4>
+      <ul>
+        <li><b>Normal fagositer öldürme sırası:</b> patojen yutulur → <b>fagozom</b> oluşur → lizozom ile birleşir (<b>fagolizozom</b>) → <b>asidifikasyon</b> (pH↓) + solunumsal patlama (reaktif oksijen/nitrojen türleri) + lizozomal enzimler ile patojen öldürülür. <b>Fagozomun asidifikasyonu, konağın patojeni öldürme mekanizmasıdır</b> – patojenin fagosit içinde hayatta kalmasını SAĞLAMAZ.</li>
+        <li><b>Patojenlerin fagosit içinde hayatta kalma stratejileri:</b> fagolizozomal füzyonun inhibisyonu (Mycobacterium, Legionella), aktin iskeletinin bozulması (fagozom oluşumunun önlenmesi), serbest oksijen radikallerinin nötralizasyonu (katalaz/SOD – Staphylococcus, Listeria), sitoplazmaya kaçış (Listeria, Shigella, Rickettsia)</li>
+        <li><b>ADCC (Antikor bağımlı hücresel sitotoksisite):</b> hedef hücre yüzeyine bağlanan <b>IgG'nin Fc bölgesine</b>, Fc reseptörü (FcγRIII/CD16) taşıyan efektör hücreler bağlanır ve hedef hücreyi lize eder; başlıca efektörler <b>NK hücreleri</b> ve <b>makrofajlardır</b> (Tc/Th lenfositler, B lenfositler ve dendritik hücreler ADCC efektörü DEĞİLDİR)</li>
+      </ul>
+    </div>
+
+    <details class="q">
+      <summary>📝 [Final-2027] – Soru 168 (ADCC'de efektör hücreler)</summary>
+      <div class="qbody">"Antikor aracılı hücresel sitotoksisitede (ADCC), aşağıdaki hücrelerden hangileri efektör rol oynar?
+A) Th-lenfositler ve Tc lenfositler
+B) B-lenfositler ve Tc-lenfositler
+C) Dendritik hücreler ve endotel hücreleri
+D) Dendritik hücreler ve Tc lenfositler
+E) NK hücreleri ve makrofajlar"</div>
+      <div class="answer">✅ Cevap: <b>E) NK hücreleri ve makrofajlar</b> – ADCC'de, hedef hücreye bağlanmış IgG antikorlarının Fc bölgesini Fc reseptörleri (FcγRIII/CD16) ile tanıyan <b>NK hücreleri ve makrofajlar</b> efektör görev görür ve hedef hücreyi lize eder.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 1569-1576, cevap anahtarı satır 1814</div>
+    </details>
+
+    <details class="q">
+      <summary>📝 [Final-2027] – Soru 169 (Patojenin fagosit içinde sağkalımını SAĞLAMAYAN mekanizma)</summary>
+      <div class="qbody">"Aşağıdakilerden hangisi, patojenlerin fagositler içinde sağ kalımını sağlamaz?
+A) Aktin iskeletinin bozulması
+B) Fagolizozomal füzyon inhibisyonu
+C) Fagozomun asidifikasyonu
+D) Serbest oksijen radikallerinin nötralizasyonu
+E) Stoplazmaya kaçış"</div>
+      <div class="answer">✅ Cevap: <b>C) Fagozomun asidifikasyonu</b> – Fagozomun asidifikasyonu, konağın patojeni öldürmek için kullandığı NORMAL bir savunma mekanizmasıdır; patojenin hayatta kalmasını sağlamaz, tam tersine öldürülmesine katkıda bulunur. A, B, D ve E (sitoplazmaya kaçış) ise patojenlerin fagosit öldürme mekanizmalarından kaçınmak için kullandığı stratejilerdir.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 1577-1583, cevap anahtarı satır 1815</div>
+    </details>
+
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">İmmün Yetmezlikler – Primer vs Sekonder</h4>
+      <ul>
+        <li><b>Primer immün yetmezlikler</b> – genetik/konjenital kökenlidir (örn. SCID, Bruton agamaglobulinemisi, kronik granülomatöz hastalık, DiGeorge sendromu); toplumda nadirdir</li>
+        <li><b>Sekonder (edinsel) immün yetmezlikler</b> – altta yatan bir hastalık veya dış etken sonucu gelişir (HIV enfeksiyonu, maligniteler, kortikosteroid/immünsüpresif kullanımı, malnütrisyon); <b>dünya çapında en yaygın sekonder immün yetmezlik nedeni malnütrisyondur</b> – protein-enerji malnütrisyonu hem hücresel hem hümoral immüniteyi bozarak enfeksiyonlara duyarlılığı artırır</li>
+      </ul>
+    </div>
+
+    <details class="q">
+      <summary>📝 [Final-2026] – Soru 69 (Dünyada en yaygın sekonder immün yetmezlik)</summary>
+      <div class="qbody">"Aşağıdakilerden hangisi dünyada en yaygın görülen ikincil (sekonder) immün yetmezliktir?
+A) Kortikosteroid kullanımı
+B) Kızamık enfeksiyonu
+C) Maligniteler
+D) HIV enfeksiyonu
+E) Malnütrisyon"</div>
+      <div class="answer">✅ Cevap: <b>E) Malnütrisyon</b> – Dünya çapında en yaygın sekonder immün yetmezlik nedeni malnütrisyondur; protein-enerji malnütrisyonu T hücre fonksiyonlarını ve antikor üretimini bozarak enfeksiyonlara duyarlılığı artırır. HIV enfeksiyonu, kortikosteroid kullanımı ve maligniteler de sekonder immün yetmezlik nedenleridir ancak küresel ölçekte malnütrisyondan daha az yaygındır.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 3701-3706, çözüm satır 4373-4374</div>
+    </details>
+  </div>
+
+  <!-- ======================= BAKTERİ GENETİĞİ ======================= -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <h3>🧬 Bakteri Genetiği – Gen Transferi Mekanizmaları</h3>
+      <span class="badge orta">ORTA</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <ul>
+        <li><b>Transformasyon</b> – ortamdaki serbest (lize olmuş bakteriden açığa çıkan) DNA'nın doğal olarak yetkin (competent) bakteriler tarafından alınması (Streptococcus, Haemophilus, Neisseria)</li>
+        <li><b>Transdüksiyon</b> – bakteriyofaj aracılığıyla gen transferi; <b>lizojenik konversiyon</b> ile toksin genleri taşınabilir: <b>difteri toksini, botulinum toksini, eritrojenik (SPE) toksin, kolera toksini (CTXφ fajı)</b></li>
+        <li><b>Konjugasyon</b> – F plazmidi/sex pilus aracılığıyla doğrudan DNA (plazmid) transferi; antibiyotik direnç genlerini taşıyan <b>R plazmidleri</b> bu yolla yayılır</li>
+        <li><b>Transpozon</b> – "atlayan genler"; plazmid ile kromozom arasında direnç genlerinin taşınmasını sağlar, birden fazla direnç geninin birlikte yayılmasına (çoklu direnç) yol açabilir</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======================= ANTİBİYOTİK MEKANİZMALARI ======================= -->
+  <div class="topic-card cok-sik-card">
+    <div class="topic-header">
+      <h3>💊 Antibiyotik Etki Mekanizmaları</h3>
+      <span class="badge cok-sik">ÇOK SIK</span>
+    </div>
+    <ul>
+      <li><b>Hücre duvarı sentezi inhibisyonu:</b> Beta-laktamlar (penisilinler, sefalosporinler, karbapenemler – PBP'ye bağlanır, transpeptidasyonu inhibe eder), Vankomisin (peptidoglikan öncüllerine bağlanır)</li>
+      <li><b>Protein sentezi inhibisyonu:</b> 30S – Aminoglikozidler, Tetrasiklinler / 50S – Makrolidler, Kloramfenikol, Linkozamidler</li>
+      <li><b>Nükleik asit sentezi inhibisyonu:</b> Florokinolonlar (DNA giraz/topoizomeraz IV), Rifampisin (RNA polimeraz)</li>
+      <li><b>Folat sentezi inhibisyonu:</b> Sülfonamidler (PABA analog), Trimetoprim (dihidrofolat redüktaz)</li>
+    </ul>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Penisilin Sınıfları</h4>
+      <ul style="margin:0;">
+        <li><b>Doğal penisilinler</b> (Penisilin G/V) – dar spektrum, Gram (+) (Streptococcus)</li>
+        <li><b>Aminopenisilinler</b> (Ampisilin, Amoksisilin) – genişletilmiş spektrum: + H. influenzae, E. coli, Listeria</li>
+        <li><b>Antistafilokokal penisilinler</b> (Metisilin, Oksasilin, Nafsilin) – penisilinaza dirençli</li>
+        <li><b>Antipsödomonal penisilinler</b> (Piperasilin, Tikarsilin) – Pseudomonas dahil geniş spektrum</li>
+      </ul>
+      <h4>Sefalosporin Kuşakları</h4>
+      <ul style="margin:0;">
+        <li><b>1. kuşak</b> (Sefazolin) – ağırlıklı Gram (+)</li>
+        <li><b>2. kuşak</b> (Sefuroksim) – artmış Gram (-) etkinlik</li>
+        <li><b>3. kuşak</b> (Seftriakson, Sefotaksim) – geniş Gram (-) spektrum, <b>kan-beyin bariyerini geçer</b> → menenjit tedavisinde tercih edilir</li>
+        <li><b>4. kuşak</b> (Sefepim) – Pseudomonas dahil çok geniş spektrum</li>
+        <li><b>5. kuşak</b> (Seftarolin) – <b>MRSA'ya etkili</b> tek sefalosporin grubu</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======================= ANTİBİYOTİK DİRENÇ MEKANİZMALARI ======================= -->
+  <div class="topic-card cok-sik-card">
+    <div class="topic-header">
+      <h3>🛡️ Antibiyotik Direnç Mekanizmaları</h3>
+      <span class="badge cok-sik">ÇOK SIK</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">İntrinsik (Doğal) Direnç</h4>
+      <p style="margin:4px 0;">Bir bakteri türünün <b>yapısal olarak</b> bir antibiyotik grubuna duyarlı olmamasıdır – örn. <b>Mycoplasma</b>'da hücre duvarı olmadığından beta-laktamlar etkisizdir; Gram (-) bakterilerde dış membran, vankomisinin hedefe ulaşmasını engeller.</p>
+      <h4>Kazanılmış Direnç Mekanizmaları</h4>
+      <table class="compare">
+        <tr><th>Mekanizma</th><th>Örnek</th></tr>
+        <tr><td><b>Enzimatik inaktivasyon</b></td><td>Beta-laktamaz/penisilinaz, <b>GSBL (genişlemiş spektrumlu beta-laktamaz)</b>, karbapenemaz</td></tr>
+        <tr><td><b>Hedef değişikliği</b></td><td><b>MRSA</b> (değişmiş PBP2a – <i>mecA</i>), <b>VRE</b> (peptidoglikan öncülünde D-Ala-D-Lac değişimi), <b>İzoniazid direnci</b> (<i>KatG</i> mutasyonu – prodrug aktive olamaz), Rifampisin direnci (<i>rpoB</i> mutasyonu), Florokinolon direnci (DNA giraz/topoizomeraz mutasyonu)</td></tr>
+        <tr><td><b>Efflux pompaları</b></td><td>Tetrasiklin, florokinolon direnci</td></tr>
+        <tr><td><b>Permeabilite azalması</b></td><td>Porin kaybı – Gram (-) bakterilerde karbapenem direnci</td></tr>
+      </table>
+      <div class="note" style="margin-top:8px;">📌 <b>MRSA / VRE / GSBL</b> ve <b>izoniazid-KatG</b> direnç mekanizmaları sınavlarda en sık sorulan "direnç" örnekleridir – özellikle <a href="mikobakteriler.html">RIPE tedavisi</a> ile birlikte tekrar et.</div>
+    </div>
+
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Kemoprofilaksi – Hızlı Özet</h4>
+      <table class="compare">
+        <tr><th>Durum</th><th>Profilaksi</th></tr>
+        <tr><td>N. meningitidis maruziyeti (yakın kontak)</td><td>Rifampisin / Siprofloksasin / Seftriakson</td></tr>
+        <tr><td>Yenidoğan göz profilaksisi (N. gonorrhoeae/Chlamydia)</td><td>Eritromisin göz pomadı</td></tr>
+        <tr><td>Latent TB enfeksiyonu</td><td>İzoniazid (± Rifampisin)</td></tr>
+        <tr><td>Endokardit profilaksisi (yüksek riskli kalp hastası + dental işlem)</td><td>Amoksisilin</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ======================= AŞI TÜRLERİ ======================= -->
+  <div class="topic-card sik-card">
+    <div class="topic-header">
+      <h3>💉 Aşı Türleri</h3>
+      <span class="badge sik">SIK</span>
+    </div>
+    <ul>
+      <li><b>Canlı atenüe:</b> MMR, BCG, OPV, Suçiçeği – güçlü/uzun immünite ama immünsüprese hastalarda kontrendike</li>
+      <li><b>İnaktif (öldürülmüş):</b> IPV, Hepatit A, İnfluenza (bazı formları) – immünsüprese hastalarda güvenli, ama daha sık doz/booster gerekebilir</li>
+      <li><b>Subünit / Toksoid:</b> Tetanoz, Difteri toksoidleri; Hepatit B (rekombinant HBsAg)</li>
+      <li><b>Konjuge:</b> Hib, pnömokok konjuge aşıları – polisakkarit antijeni proteine bağlayarak T-hücre bağımlı yanıt sağlar (küçük çocuklarda etkili)</li>
+    </ul>
+  </div>
+
+  <!-- ======================= STERİLİZASYON / DEZENFEKSİYON ======================= -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <h3>🧴 Sterilizasyon ve Dezenfeksiyon</h3>
+      <span class="badge orta">ORTA</span>
+    </div>
+    <ul>
+      <li><b>Otoklav (buhar + basınç):</b> En etkili, sporlar dahil her şeyi öldürür – ısıya dayanıklı malzemeler için</li>
+      <li><b>Kuru ısı:</b> Yağ, toz gibi nemin penetre olamadığı malzemeler için</li>
+      <li><b>Etilen oksit gazı / Gama ışınlama:</b> <b>Kırılgan/ısıya dayanıksız plastik malzemeler</b> için en uygun yöntemler (otoklav bunları bozar)</li>
+      <li><b>Filtrasyon:</b> Isıya dayanıksız sıvılar (serum, antibiyotik solüsyonları)</li>
+    </ul>
+    <div class="note">📌 Final sorusunda "kırılgan plastik gereçlerin sterilizasyonu için en uygun yöntem" soruluyordu → cevap <b>otoklav DEĞİL</b>, etilen oksit gazı veya gama ışınlama gibi düşük ısılı yöntemlerdir.</div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Dirençlilik Piramidi (En Dirençliden En Az Dirençliye)</h4>
+      <p style="margin:4px 0;"><b>Prionlar</b> &gt; <b>Bakteri sporları</b> &gt; <b>Mikobakteriler</b> &gt; <b>Kistler/Ookistler (Cryptosporidium, Giardia)</b> &gt; <b>Gram (-) bakteriler</b> &gt; <b>Mantarlar / Gram (+) bakteriler</b> &gt; <b>Zarflı virüsler</b></p>
+      <p style="margin:4px 0;">📌 Bu sıralama, bir sterilizasyon/dezenfeksiyon yönteminin etkinliğini değerlendirmek için kullanılır: <b>en dirençli grubu (prion/spor) öldüren bir yöntem, alt sıradaki tüm grupları da öldürür.</b> Ek olarak: <b>UV ışın</b> yüzey dezenfeksiyonunda etkilidir ama sporlara penetrasyonu zayıftır; <b>gluteraldehit</b> yüksek seviye dezenfeksiyon (endoskop) için kullanılır; <b>pastörizasyon</b> tam sterilizasyon DEĞİLDİR, patojen yükünü azaltır.</p>
+    </div>
+
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <h4 style="margin-top:0;">Antiseptikler – Kimyasal Sınıflandırma</h4>
+      <ul style="margin:0;">
+        <li><b>Klorheksidin</b> – sentetik <b>katyonik bileşik (katyonik deterjan)</b>; cilt/cerrahi el antisepsisinde ve ağız gargaralarında yaygın kullanılır, geniş spektrumlu ve kalıcı (rezidüel) etkilidir</li>
+        <li><b>Povidon iyot, hekzaklorofen, gümüş nitrat, benzoik asit</b> gibi diğer antiseptikler farklı kimyasal sınıflardandır (iyodofor, bisfenol, ağır metal, organik asit)</li>
+        <li><b>Etil alkol (etanol)</b> – antiseptik etkinlik için <b>en az %70</b> saflıkta olmalıdır; %70 etanol, mikrobiyal membranları ve proteinleri en etkili şekilde denatüre eder (çok daha yüksek/saf konsantrasyonlarda hızlı buharlaşma nedeniyle etkinlik azalır)</li>
+      </ul>
+    </div>
+
+    <details class="q">
+      <summary>📝 Final – Soru 79 (Etanolün antiseptik etkinlik için gereken minimum saflığı)</summary>
+      <div class="qbody">"Etanolün antiseptik olarak kullanılması için saflık düzeyi (derece) en az ne kadar olmalıdır?
+A) %10
+B) %30
+C) %50
+D) %70
+E) %80"</div>
+      <div class="answer">✅ Cevap: <b>D) %70</b> – Etanolün antimikrobiyal etkinliği için gereken minimum konsantrasyon <b>%70</b>'tir; bu konsantrasyonda hem mikrobiyal proteinleri denatüre eder hem de yeterli su içeriği sayesinde hücre içine penetrasyonu sağlar. Daha yüksek konsantrasyonlarda (örn. %95-100) hızlı buharlaşma nedeniyle etkinlik azalır.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 5375-5380</div>
+    </details>
+
+    <details class="q">
+      <summary>📝 Final – Soru 73 (Katyonik deterjan yapısındaki antiseptik)</summary>
+      <div class="qbody">"Aşağıdaki antiseptiklerden hangisi katyonik deterjan yapısındadır?
+A) Gümüş nitrat
+B) Klorheksidin
+C) Povidon iyod
+D) Hekzaklorofen
+E) Benzoik asid"</div>
+      <div class="answer">✅ Cevap: <b>B) Klorheksidin</b> – Klorheksidin, sentetik <b>katyonik bir bileşiktir</b>; bu özelliği sayesinde negatif yüklü bakteri hücre membranına güçlü bağlanır.</div>
+      <div class="src">Kaynak: dönem3 tüm final çıkmışları27.txt, satır 6480-6486, çözüm satır 7436</div>
+    </details>
+  </div>
+
+  <!-- ======================= NORMAL FLORA / STERİL BÖLGELER ======================= -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <h3>🧍 Normal Flora ve Steril Vücut Bölgeleri</h3>
+      <span class="badge orta">ORTA</span>
+    </div>
+    <div class="tus-box">
+      <span class="tus-tag">TUS KİTABI</span>
+      <ul>
+        <li><b>Steril bölgeler (normalde mikroorganizma içermez):</b> kan, BOS, idrar (mesane içi), plevral/peritoneal/sinovyal sıvılar, alt solunum yolu (akciğer parankimi)</li>
+        <li><b>Normal flora bulunan bölgeler:</b>
+          <ul>
+            <li>Deri – <i>Staphylococcus epidermidis</i> (en sık)</li>
+            <li>Ağız/orofarenks – viridans streptokoklar (en sık)</li>
+            <li>Kolon – <i>Bacteroides fragilis</i> (en sık anaerob), <i>E. coli</i> (en sık aerob)</li>
+            <li>Vajina – <i>Lactobacillus</i> (laktik asit üretimiyle pH'ı düşürür, koruyucu)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <p>📋 <a href="bakteriler.html" style="color:#5eead4;">← Bakteriler</a> &nbsp;|&nbsp; <a href="index.html" style="color:#5eead4;">Ana Sayfaya Dön</a></p>
+</footer>
+
+</body>
+</html>
