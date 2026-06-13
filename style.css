@@ -9,6 +9,7 @@
 body{
   margin:0; font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
   background:var(--bg); color:var(--text); line-height:1.55;
+  overflow-wrap:break-word;
 }
 header.hero{
   background:linear-gradient(135deg,#0f766e,#134e4a);
@@ -129,3 +130,28 @@ code{background:#f1f5f9; padding:1px 5px; border-radius:4px; font-size:.85em;}
 }
 .hap-item b{color:#0f172a;}
 .badge.zero{background:#f1f5f9; color:var(--muted); border:1px solid #cbd5e1;}
+
+/* ============ Mobil uyumluluk ============ */
+@media (max-width:768px){
+  header.hero{padding:20px 14px 16px;}
+  header.hero h1{font-size:1.3rem;}
+  header.hero p{font-size:.82rem;}
+  main{padding:16px 10px 48px;}
+  section{margin-bottom:30px; overflow-x:auto;}
+  h2.section-title{font-size:1.15rem;}
+  .section-desc{font-size:.85rem;}
+  nav.toc{
+    flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    gap:4px; padding:8px 10px; scrollbar-width:none;
+  }
+  nav.toc::-webkit-scrollbar{display:none;}
+  nav.toc a{padding:6px 9px; font-size:.78rem;}
+  .topic-card{padding:14px 14px; overflow-x:auto;}
+  .topic-header h3{font-size:1rem;}
+  .topic-card table.compare, table.rank{min-width:540px;}
+  .stat-box .num{font-size:1.3rem;}
+  .cards-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px;}
+  .stat-grid{grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:8px;}
+  .ranklist li{padding:12px 12px 12px 44px; font-size:.92rem;}
+  .hap-item{font-size:.88rem;}
+}
