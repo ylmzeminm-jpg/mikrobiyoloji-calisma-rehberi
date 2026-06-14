@@ -12,6 +12,9 @@
   <h1>💊 Önemli Hap Bilgiler</h1>
   <p>Her etken için en spesifik 3 cümle – sınav öncesi hızlı tekrar</p>
   <p style="font-size:.8rem; opacity:.75;">Konu başlıklarındaki rozet, o konu grubunda toplam kaç çıkmış soru olduğunu gösterir</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Etken veya konu ara... (örn. Salmonella, HIV, Tinea)" oninput="microSearch(this.value)" autocomplete="off">
+  </div>
 </header>
 
 <nav class="toc">
@@ -410,5 +413,6 @@
   <p style="margin-top:10px; opacity:.6;">Bu sayfa, diğer konu sayfalarındaki çıkmış soru analizi ve TUS kitabı bilgilerinin her etken için en spesifik 3 cümleye sıkıştırılmış halidir.</p>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>

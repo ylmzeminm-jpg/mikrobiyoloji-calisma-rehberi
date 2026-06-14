@@ -11,6 +11,9 @@
 <header class="hero">
   <h1>📋 Genel Mikrobiyoloji</h1>
   <p>Bakteri Yapısı · Boyama · Üreme/Metabolizma · Genetik · Toksinler · Antibiyotikler/Direnç · Aşılar · Sterilizasyon</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Etken veya konu ara... (örn. Salmonella, HIV, Tinea)" oninput="microSearch(this.value)" autocomplete="off">
+  </div>
 </header>
 
 <nav class="toc">
@@ -419,5 +422,6 @@ E) Benzoik asid"</div>
   <p>📋 <a href="bakteriler.html" style="color:#5eead4;">← Bakteriler</a> &nbsp;|&nbsp; <a href="index.html" style="color:#5eead4;">Ana Sayfaya Dön</a></p>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>

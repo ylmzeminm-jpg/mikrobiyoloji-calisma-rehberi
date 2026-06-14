@@ -11,6 +11,9 @@
 <header class="hero">
   <h1>🔬 Mikobakteriler</h1>
   <p>M. tuberculosis · M. leprae (Lepra) · Atipik Mikobakteriler · Nocardia</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Etken veya konu ara... (örn. Salmonella, HIV, Tinea)" oninput="microSearch(this.value)" autocomplete="off">
+  </div>
 </header>
 
 <nav class="toc">
@@ -244,5 +247,6 @@ E) Etken Mycobacterium leprae olup periferik sinirleri tutar, yapay besiyerinde 
   <p>🔬 <a href="index.html" style="color:#5eead4;">← Ana Sayfaya Dön</a> &nbsp;|&nbsp; Sıradaki: <a href="parazitler.html" style="color:#5eead4;">Parazitler →</a></p>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>

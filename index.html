@@ -12,6 +12,9 @@
   <h1>🦠 Tıbbi Mikrobiyoloji ve Parazitoloji</h1>
   <p>Dönem 3 – Final Çıkmış Soru Analizine Dayalı Çalışma Rehberi</p>
   <p style="font-size:.8rem; opacity:.75;">Tüm modül (M1-M5) çıkmışları + Final derlemesi (×2 ağırlık) + TUSDATA "Mikrobiyoloji 1" kitabından destek bilgiler</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Etken veya konu ara... (örn. Salmonella, HIV, Tinea)" oninput="microSearch(this.value)" autocomplete="off">
+  </div>
 </header>
 
 <nav class="toc">
@@ -146,5 +149,6 @@
   <p style="margin-top:18px; opacity:.6;">Bu rehber, paylaşılan çıkmış soru dosyalarının ve TUS kitabının analizine dayanarak otomatik olarak oluşturulmuştur. Başarılar! 🍀</p>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>

@@ -11,6 +11,9 @@
 <header class="hero">
   <h1>🧫 Bakteriler</h1>
   <p>Gram (+) Koklar · Gram (-) Koklar · Gram (+) Çomaklar · Enterobacteriaceae · Diğer Gram (-) Çomaklar · Spiroketler · Mycoplasma · Chlamydia/Rickettsia</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Etken veya konu ara... (örn. Salmonella, HIV, Tinea)" oninput="microSearch(this.value)" autocomplete="off">
+  </div>
 </header>
 
 <nav class="toc">
@@ -638,5 +641,6 @@ E) Sifiliz"</div>
   <p>🧫 <a href="mantarlar.html" style="color:#5eead4;">← Mantarlar</a> &nbsp;|&nbsp; <a href="index.html" style="color:#5eead4;">Ana Sayfa</a> &nbsp;|&nbsp; Sıradaki: <a href="genel.html" style="color:#5eead4;">Genel Mikrobiyoloji →</a></p>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>
