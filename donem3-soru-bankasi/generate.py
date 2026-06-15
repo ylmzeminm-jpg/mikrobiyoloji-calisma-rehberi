@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SRC_FIZYO = ROOT.parent.parent / "fizyopato soruları.txt"
+SRC_FARMA = ROOT.parent.parent / "farma soruları.txt"
 SRC_MIKRO_HTML = ROOT.parent / "mikrosorulari.html"
 OUT = ROOT / "index.html"
 
@@ -26,6 +27,20 @@ FIZYO_SECTIONS = [
 ]
 FIZYO_META = {name: meta for name, *meta in FIZYO_SECTIONS}
 
+FARMA_SECTIONS = [
+    ("27 FİNAL",     "fr-27final", "🟣", "exam27", "27 FİNAL"),
+    ("26 FİNAL",     "fr-26final", "🌸", "exam26", "26 FİNAL"),
+    ("26 BÜTÜNLEME", "fr-26but",   "🔷", "exam26b", "26 BÜTÜNLEME"),
+    ("25 FİNAL",     "fr-25final", "🟠", "exam25", "25 FİNAL"),
+    ("24 FİNAL",     "fr-24final", "🔵", "exam24", "24 FİNAL"),
+    ("23 FİNAL",     "fr-23final", "🟢", "exam23", "23 FİNAL"),
+    ("29 D3M1",      "fr-29d3m1",  "⚪", "d3m1", "29 D3M1"),
+    ("29 D3M2",      "fr-29d3m2",  "🔴", "d3m2", "29 D3M2"),
+    ("29 D3M3",      "fr-29d3m3",  "🟡", "d3m3", "29 D3M3"),
+    ("29 D3M4",      "fr-29d3m4",  "🟦", "d3m4", "29 D3M4"),
+    ("29 D3M5",      "fr-29d3m5",  "🟥", "d3m5", "29 D3M5"),
+]
+
 MIKRO_SECTIONS = [
     ("sec-27final", "🟣", "exam27", "27 FİNAL"),
     ("sec-26final", "🌸", "exam26", "26 FİNAL"),
@@ -44,7 +59,7 @@ SECTION_RE = re.compile(r"^=+\n(.+)\n=+$")
 UNSURE_RE = re.compile(r"tartış|emin değil|emin olmayarak", re.IGNORECASE)
 
 
-def parse_fizyo(text):
+def parse_questions(text):
     """Returns dict: section name -> list of question dicts."""
     blocks = re.split(r"\n\s*\n", text.strip())
     sections = {}
@@ -90,7 +105,7 @@ def parse_fizyo(text):
     return sections
 
 
-def render_fizyo_card(q, emoji, badge_class, label):
+def render_question_card(q, emoji, badge_class, label):
     text_lines = list(q["stem"]) + [f"{l}) {t}" for l, t in q["options"]]
     soru_text = html.escape("\n".join(text_lines), quote=False)
     card = [
@@ -115,12 +130,12 @@ def render_fizyo_card(q, emoji, badge_class, label):
     return "\n".join(card)
 
 
-def build_fizyo_sections(sections):
+def build_question_sections(sections, section_defs):
     out = []
     subnav = []
     total_q = 0
     total_cevap = 0
-    for name, anchor, emoji, badge_class, label in FIZYO_SECTIONS:
+    for name, anchor, emoji, badge_class, label in section_defs:
         qs = sections.get(name, [])
         total_q += len(qs)
         total_cevap += sum(1 for q in qs if q["cevap_letter"])
@@ -128,7 +143,7 @@ def build_fizyo_sections(sections):
         out.append(f'<section id="{anchor}">')
         out.append(f'<h2 class="section-title">{emoji} {label} <span class="badge {badge_class}">{len(qs)} soru</span></h2>')
         for q in qs:
-            out.append(render_fizyo_card(q, emoji, badge_class, label))
+            out.append(render_question_card(q, emoji, badge_class, label))
         out.append('</section>')
     return "\n".join(out), "\n".join(subnav), total_q, total_cevap
 
@@ -150,8 +165,11 @@ def extract_mikro(html_text):
 
 
 def main():
-    fizyo_sections = parse_fizyo(SRC_FIZYO.read_text(encoding="utf-8"))
-    fizyo_html, fizyo_subnav, fizyo_total, fizyo_cevap = build_fizyo_sections(fizyo_sections)
+    fizyo_sections = parse_questions(SRC_FIZYO.read_text(encoding="utf-8"))
+    fizyo_html, fizyo_subnav, fizyo_total, fizyo_cevap = build_question_sections(fizyo_sections, FIZYO_SECTIONS)
+
+    farma_sections = parse_questions(SRC_FARMA.read_text(encoding="utf-8"))
+    farma_html, farma_subnav, farma_total, farma_cevap = build_question_sections(farma_sections, FARMA_SECTIONS)
 
     mikro_html_raw = SRC_MIKRO_HTML.read_text(encoding="utf-8")
     mikro_body, mikro_subnav = extract_mikro(mikro_html_raw)
@@ -160,22 +178,22 @@ def main():
     mikro_total = mikro_total_m.group(1) if mikro_total_m else "?"
     mikro_cevap = mikro_cevap_m.group(1) if mikro_cevap_m else "?"
 
-    grand_total = int(mikro_total) + fizyo_total
-    grand_cevap = int(mikro_cevap) + fizyo_cevap
+    grand_total = int(mikro_total) + fizyo_total + farma_total
+    grand_cevap = int(mikro_cevap) + fizyo_cevap + farma_cevap
 
     page = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dönem 3 Soru Bankası – Mikrobiyoloji &amp; Fizyopatoloji Çıkmış Soruları</title>
+<title>Dönem 3 Soru Bankası – Mikrobiyoloji, Fizyopatoloji &amp; Farmakoloji Çıkmış Soruları</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
   <h1>📚 Dönem 3 Soru Bankası</h1>
-  <p>Mikrobiyoloji ve Fizyopatoloji çıkmış soruları tek sayfada – {grand_total} soru</p>
+  <p>Mikrobiyoloji, Fizyopatoloji ve Farmakoloji çıkmış soruları tek sayfada – {grand_total} soru</p>
   <p style="font-size:.8rem; opacity:.75;">27, 26, 25, 24, 23. Dönem Final (+ 26. Dönem Bütünleme) ile 29 D3M1-D3M5 modül sınavlarından derlendi. Her sorunun altındaki "Cevabı Gör" kutusuna tıklayarak doğru cevabı görebilirsin.</p>
   <div class="search-wrap">
     <input type="text" id="searchInput" placeholder="🔍 Soru, etken veya cevap ara..." oninput="microSearch(this.value)" autocomplete="off">
@@ -186,6 +204,7 @@ def main():
   <a href="#ozet">📊 Özet</a>
   <a href="#mikrobiyoloji">🦠 Mikrobiyoloji Soruları</a>
   <a href="#fizyopatoloji">🩺 Fizyopatoloji Soruları</a>
+  <a href="#farmakoloji">💊 Farmakoloji Soruları</a>
 </nav>
 
 <main>
@@ -198,6 +217,7 @@ def main():
   <div class="stat-box"><div class="num">{grand_total}</div><div class="label">Toplam soru</div></div>
   <div class="stat-box"><div class="num">{mikro_total}</div><div class="label">Mikrobiyoloji</div></div>
   <div class="stat-box"><div class="num">{fizyo_total}</div><div class="label">Fizyopatoloji</div></div>
+  <div class="stat-box"><div class="num">{farma_total}</div><div class="label">Farmakoloji</div></div>
   <div class="stat-box"><div class="num">{grand_cevap}</div><div class="label">Cevabı bulunan</div></div>
 </div>
 
@@ -211,6 +231,11 @@ def main():
 {fizyo_subnav}
 </div>
 
+<h3>💊 Farmakoloji bölümleri</h3>
+<div class="subnav">
+{farma_subnav}
+</div>
+
 <div class="note">📌 <b>Nasıl kullanılır:</b> Her kart bir soruyu (kökü + şıkları) gösterir. "✅ Cevabı Gör" yazısına tıkladığında doğru cevap (yeşil kutu) açılır. Sarı kutular <b>"(emin değil)"</b> işaretli, tartışmalı/teyide açık cevaplardır. Üstteki arama kutusu bu sayfadaki tüm soru, şık ve cevap metinlerinde arama yapar.</div>
 </section>
 
@@ -222,10 +247,14 @@ def main():
 
 {fizyo_html}
 
+<h2 id="farmakoloji" class="subject-divider">💊 Farmakoloji Soruları ({farma_total})</h2>
+
+{farma_html}
+
 </main>
 
 <footer>
-<p>📚 Dönem 3 Soru Bankası — Mikrobiyoloji bölümü <a href="../mikrosorulari.html" style="color:#5eead4;">Mikrobiyoloji Çalışma Rehberi</a>'nden, Fizyopatoloji bölümü "fizyopato soruları.txt" kaynağından derlenmiştir.</p>
+<p>📚 Dönem 3 Soru Bankası — Mikrobiyoloji bölümü <a href="../mikrosorulari.html" style="color:#5eead4;">Mikrobiyoloji Çalışma Rehberi</a>'nden, Fizyopatoloji bölümü "fizyopato soruları.txt", Farmakoloji bölümü "farma soruları.txt" kaynağından derlenmiştir.</p>
 </footer>
 
 <script src="search.js"></script>
@@ -236,6 +265,7 @@ def main():
     print(f"Yazıldı: {OUT}")
     print(f"Mikro: {mikro_total} soru (cevaplı: {mikro_cevap})")
     print(f"Fizyopato: {fizyo_total} soru (cevaplı: {fizyo_cevap})")
+    print(f"Farma: {farma_total} soru (cevaplı: {farma_cevap})")
     print(f"Toplam: {grand_total} soru (cevaplı: {grand_cevap})")
 
 
